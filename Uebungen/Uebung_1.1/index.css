@@ -1,0 +1,15 @@
+.table {
+    align-content: center;
+}
+
+.div {
+    text-align: center;
+}
+
+th {
+    text-align: right;
+}
+
+td {
+    text-align: left;
+}
