@@ -1,0 +1,44 @@
+.person {
+  margin: 20px;
+  display: inline-block;
+  border: 1px solid darkgrey;
+  background-color: lightgrey;
+  padding: 10px;
+  -webkit-box-shadow: #777279 1px 1px;
+          box-shadow: #777279 1px 1px;
+  /*Wird zu .person__image*/
+}
+
+.person__image {
+  border-radius: 50%;
+}
+
+.person__text {
+  text-align: center;
+  margin: 10px;
+}
+
+.person__title {
+  text-align: center;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.person__button {
+  background-color: #14d50c;
+  width: 100%;
+  border: none;
+  padding: 4px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+.person--manager {
+  background-color: blue;
+  /*wird zu .person--manager.person__button*/
+}
+
+.person--manager .person__button {
+  background-color: red;
+}
+/*# sourceMappingURL=style.css.map */

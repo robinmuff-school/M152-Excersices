@@ -1,0 +1,42 @@
+.person {
+    margin: 20px;
+    display: inline-block;
+    border: 1px solid darkgrey;
+    background-color: lightgrey;
+    padding: 10px;
+    box-shadow: #777279 1px 1px;
+
+    /*Wird zu .person__image*/
+    &__image {
+        border-radius: 50%
+    }
+
+    &__text {
+        text-align: center;
+        margin: 10px;
+    }
+
+    &__title {
+        text-align: center;
+        margin: 10px;
+        font-weight: bold;
+    }
+
+    &__button  {
+        background-color: #14d50c;
+        width: 100%;
+        border:none;
+        padding: 4px;
+        margin-top: 15px;
+        border-radius: 5px;
+    }
+
+    &--manager {
+        background-color: blue;
+
+        /*wird zu .person--manager.person__button*/
+        .person__button {
+            background-color: red;
+        }
+    }
+}
