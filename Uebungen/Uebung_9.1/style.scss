@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "PressStart2P";
+    src: url(PressStart2P-Regular.ttf);
+  }
+
+.person {
+    font-family: "PressStart2P";
+    display: inline-block;
+    border: 1px solid darkgrey;
+    background-color: lightgrey;
+    padding: 10px;
+    box-shadow: #777279 1px 1px;
+
+    img {
+        border-radius: 50%
+    }
+
+    div {
+        text-align: center;
+        margin: 10px;
+    }
+
+    .title {
+        font-weight: bold;
+    }
+
+    button  {
+        background-color: #14d50c;
+        width: 100%;
+        border:none;
+        padding: 4px;
+        margin-top: 15px;
+        border-radius: 5px;
+    }
+}
