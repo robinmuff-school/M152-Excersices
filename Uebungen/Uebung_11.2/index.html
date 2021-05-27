@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video width="320" height="240" id="video">
+        <source src="Video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <br>
+    <button id="btnplaypause">Play</button>
+    <br>
+    <p>Volume: <input id="inVolume" type="range" min="1" max="100" value="100"></p>
+    <p>Speed: <input id="inSpeed" type="range" step="0.5" min="0.5" max="2" value="1"></p>    
+    <p>Loop: <input id="inLoop" type="checkbox"></p>
+    
+</body>
+
+<script src="index.js"></script>
+</html>
