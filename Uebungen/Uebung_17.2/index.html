@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas tutorial</title>
+    <script type="text/javascript">
+        function draw () {
+            // first we need to create a stage
+            var stage = new Konva.Stage({
+                container: 'viewport',   // id of container <div>
+                width: 500,
+                height: 500
+            });
+
+            // then create layer
+            var layer = new Konva.Layer();
+
+            // create our shape
+            var circle = new Konva.Circle({
+                x: stage.width() / 2,
+                y: stage.height() / 2,
+                radius: 70,
+                fill: 'yellow',
+                stroke: 'black',
+                strokeWidth: 4
+            });
+            var eye1 = new Konva.Circle({
+                x: stage.width() / 2 - 20,
+                y: stage.height() / 2 - 20,
+                radius: 10,
+                fill: 'pink',
+                stroke: 'black',
+                strokeWidth: 4
+            });
+            var eye2 = new Konva.Circle({
+                x: stage.width() / 2 + 20,
+                y: stage.height() / 2 - 20,
+                radius: 10,
+                fill: 'pink',
+                stroke: 'black',
+                strokeWidth: 4
+            });
+            var innereye2 = new Konva.Circle({
+                x: stage.width() / 2 + 20,
+                y: stage.height() / 2 - 20,
+                radius: 5,
+                fill: 'orange',
+                stroke: 'black',
+                strokeWidth: 4
+            });
+            var innereye1 = new Konva.Circle({
+                x: stage.width() / 2 - 20,
+                y: stage.height() / 2 - 20,
+                radius: 5,
+                fill: 'blue',
+                stroke: 'black',
+                strokeWidth: 4
+            });
+            var mouth = new Konva.Arc({
+                x: stage.width() / 2,
+                y: stage.height() / 2 - 20,
+                innerRadius: 50,
+                outerRadius: 70,
+                angle: 98,
+                rotation: 40,
+                fill: 'brown',
+                stroke: 'black',
+                strokeWidth: 3,
+            })
+
+            function changemoth() {
+                if (mouth.rotation() == -140) {
+                    mouth.rotation(40);
+                    mouth.y(stage.height() / 2 - 20);
+                } else {
+                    mouth.rotation(-140);
+                    mouth.y(stage.height() / 2 + 75);
+                }
+            }
+
+            var rect1 = new Konva.Rect({
+        x: 235,
+        y: 258,
+        width: 30,
+        height: 10,
+        fill: 'black',
+        stroke: 'black',
+        strokeWidth: 4,
+      });
+
+            eye1.on("click",changemoth);
+            eye2.on("click",changemoth);
+            innereye1.on("click",changemoth);
+            innereye2.on("click",changemoth);
+
+            // add the shape to the layer
+            layer.add(circle);
+            layer.add(eye1);
+            layer.add(eye2);
+            layer.add(innereye1);
+            layer.add(innereye2);
+            layer.add(mouth);
+            layer.add(rect1);
+
+            // add the layer to the stage
+            stage.add(layer);
+
+            // draw the image
+            layer.draw();
+        }
+    </script>
+
+</head>
+<body onload="draw();">
+<div id="viewport"></div>
+</body>
+<script src="https://unpkg.com/konva@8/konva.min.js"></script>
+
+</html>
